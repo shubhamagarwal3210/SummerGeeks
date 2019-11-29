@@ -1,33 +1,153 @@
-.MainHeading {
-	width: 100%;
-	color: white; 
-	padding: 40px; 
-	background: #1abc9c;
-	float: left;
-	text-align: center;
+.Checkout_form {
+    width:100%;
+    height:15%;
+    background:#FFF380;
 }
 
-/** {
-	margin: 0px;
-	padding: 0px;
-}*/
-
-.InputBlocks{
-	margin: 10px 0px 10px 0px;
+.ckout_input {
+    width: 30%;
+    display:inline-block;
+    /*margin-right: -90px;*/
+    margin-right:-7%;
+    box-sizing: border-box;
+    padding: 1%;
+    /*margin-top: 8px;*/
+    text-align: right;
 }
 
-.SideHeading{
-	width: 40%;
-	margin: 50px auto 0px;
-	color: white;
-	background: #5F9EA0;
-	text-align: center;
-	border: 1px solid #B0C4DE;
-	border-bottom: none;
-	border-radius: 10px 10px 0px 0px;
-	padding: 20px;
-	/*margin-right: 50px auto 0px;*/
+.ckout_input > div {
+    background:red;
+    height:5%;
 }
-.About{
+
+.about_class {
+    width:68%;
+    height:90%;
+    /*background:yellow;*/
+    display: inline-block;
 }
+
+.about_img {
+    width: 100%;
+    display:block;
+    margin-right:100%;
+    box-sizing: border-box;
+    padding: 1%;
+}
+
+.about_img > div {
+    /*background:green;*/
+    /*height:250px;*/
+    height:45%;
+}
+
+.Main_checkin{
+    width:28%;
+    height:45%;
+    /*background:pink;*/
+    display: inline-block;
+
+}
+
+.checkin{
+    width: 80%;
+    display:block;
+    margin-right: -10%;
+    box-sizing: border-box;
+    padding: 1%;
+}
+
+.checkin > div {
+    background:#FF00;
+    /*height:35px;*/
+    height:10%
+}
+
+.book_app{
+    height:10%;
+    width: 88%;
+    /*margin: 50px auto 0px;*/
+    /*margin: 0% auto;*/
+    color: white;
+    font-size: 150%;
+    background:#5D7E7E;
+    text-align: center;
+    border: 6.25% solid #B0C4DE;
+    border-bottom: none;
+    /*border-radius: 10px 10px 0px 0px;*/
+    /*border-radius: 30% 30% 0% 0%;*/
+    /*padding: 20px;*/
+    padding:6%;
+}
+
+.input{
+    /*text-align: center;*/
+    /*margin: 3px;*/
+    margin:1%;
+}
+
+.your_detail{
+    height:8%;
+    width: 75%;
+    /*margin: 30px auto 0px;*/
+    margin:5% auto;
+    color: white;
+    background: #5F9EA0;
+    text-align: center;
+    font-size: 150%;
+    /*border: 1px solid #B0C4DE;*/
+    border: 10% solid #B0C4DE;
+    border-bottom: none;
+    /*border-radius: 10px 10px 0px 0px;*/
+    border-radius: 6% 6% 0% 0%;
+    padding: 6%;
+}
+
+.host_detail{
+    height:8%;
+    width: 75%;
+    /*margin: 30px auto 0px;*/
+    margin:5% auto;
+    color: white;
+    background: #5F9EA0;
+    font-size: 150%;
+    text-align: center;
+    border: 10% solid #B0C4DE;
+    border-bottom: none;
+    border-radius: 6% 6% 0% 0%;
+    padding: 6%;
+}
+
+.about{
+    text-align: center;
+    /*height: 50%;*/
+}
+
+.img{
+    text-align: center;
+    /*height: 50%;*/
+}
+
+.input_text{
+    text-align: center;
+}
+
+.btn{
+    padding: 5%;
+    font-size:100%;
+    color: white;
+    background:#CD6155;
+    border: none;
+    border-radius: 6%;
+}
+
+.reg_form {
+    width: 88%;
+    /*margin:0% auto;*/
+    padding:5.75%;
+    border: 1px solid #B0C4DE;
+    background:#FFF380;
+    border-radius: 0% 0% 6% 6%;
+}
+
 

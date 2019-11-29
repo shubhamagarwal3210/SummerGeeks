@@ -12,8 +12,8 @@ function validateName($name) {
 	//$db = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 	$db = mysqli_connect('localhost', 'phpmyadmin', 'root', 'phpmyadmin'); 
 
-	$username = "xyz@gmail.com";
-	$hash = "0123456789012345678901234567890123456789abcdefghijklmn0123456789";
+	$username = "username@someemail.com";
+	$hash = "7c75579c553fccec2fe790ae1f8dc650fabce48c057b573bacec3e0c52c5a16c";
 
 	// varaibles to store input data from the visitor.
 	$name = "";
@@ -41,7 +41,7 @@ function validateName($name) {
 
 		if (empty($name)) {
 			$ErrorFlag = true;
-			$nameErr = "Name is required";
+			$nameErr = "Required";
 		}else{
 				validateName($name);
 			}
@@ -49,7 +49,7 @@ function validateName($name) {
 
 		if (empty($email)) {
 			$ErrorFlag = true;
-			$EmailErr = "Email is required";
+			$EmailErr = "Required";
 		}else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
 			$ErrorFlag = true;
 			echo "<script type='text/javascript'>alert('Invalid Visitor Email');</script>";
@@ -57,7 +57,7 @@ function validateName($name) {
 		
 		if (empty($contact)) {
 			$ErrorFlag = true;
-			$contactErr = "contact is required";
+			$contactErr = "Required";
 		}else if(strlen($contact)!=10){
 			$ErrorFlag = true;
 			echo "<script type='text/javascript'>alert('Invalid Visitor Contact number');</script>";
@@ -65,7 +65,7 @@ function validateName($name) {
 		
 		if (empty($hostname)) {
 			$ErrorFlag = true;
-			$hostnameErr = "Name is required";
+			$hostnameErr = "Required";
 		}else{
 			validateName($hostname);
 		}
@@ -73,7 +73,7 @@ function validateName($name) {
 
 		if (empty($hostemail)) {
 			$ErrorFlag = true;
-			$hostEmailErr = "Email is required";
+			$hostEmailErr = "Required";
 		}else if(!filter_var($hostemail, FILTER_VALIDATE_EMAIL)){
 			$ErrorFlag = true;
 			echo "<script type='text/javascript'>alert('Invalid Host Email');</script>";
@@ -82,7 +82,7 @@ function validateName($name) {
 
 		if (empty($hostcontact)) {
 			$ErrorFlag = true;
-			$hostcontactErr = "contact is required";
+			$hostcontactErr = "Required";
 		}
 		else if(strlen($hostcontact)>10 || strlen($hostcontact)<10){
 			$ErrorFlag = true;
@@ -169,11 +169,11 @@ function validateName($name) {
 		// check for correctness of all details provided.
 		if (empty($email)) {
 			$ErrorFlag = true;
-			$coEmailErr = "Email is required";
+			$coEmailErr = "Required";
 		}
 		if (empty($contact)) {
 			$ErrorFlag = true;
-			$coContactErr = "Contact Number is required";
+			$coContactErr = "Required";
 		}
 		else{
 			// SQL query to select Email from database. 
@@ -189,7 +189,7 @@ function validateName($name) {
 				$result = mysqli_query($db,$chkoutupdated);
 				$row = mysqli_fetch_row($result);
 				$message = "VisitorName : " . $name . "\nVisitorEmail : ". $email . "\nCheck In time of the visitor : " . $row[6]. "\nCheck Out time of the visitor : " . $row[7] . "\nHost name : " . $row[3]  . "\nEmail of host "  . $row[4] . "  ";
-				echo $message;
+				// echo $message;
 				
 				// mailing the visitor his visit details.  
 				if(mail($email, "Details of the visit",  $message)){

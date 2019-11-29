@@ -1,85 +1,93 @@
 <?php include ('server.php'); ?>
 <!DOCTYPE html>
 <html>
-
 	<head>
-		<title>Welcome To Innovaccer</title>
+		<title>Innovaccer Booking</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-
-	<body>
-		<div> <h1 class="MainHeading"><strong>Innovaccer</strong></h1> </div>
-
-		<div>
-			<div class=About>
-				<p>Innovaccer Inc. is a Silicon Valley-based healthcare company, founded by Abhinav Shashank, Kanav Hasija, and Sandeep Gupta that provides physician practices, hospitals, health systems, and other healthcare providers with population health management and Pay-for-performance solutions.[buzzword] Innovaccer also provides solutions[buzzword] for care management, referral management, and patient engagement.</p>
-			</div>
-			<div class="logo" style="float: right; width: 50%">
-				<img src="Innovaccer.jpg" alt="Error Logo Missing" height="400" width="400">
-			</div>
-		</div>
-
-		<div class="checkOut" style="float: right; width: 50%">
-			<h2 class="SideHeading"> <strong>Check Out</strong></h2>
-
+	<body style="background-color:#FFFFC2;">
+		<div class="img"> <img src="logo" alt="Error Logo Missing" height="150" width="1000"></div>
+		<div class="Checkout_form">
 			<form method="post" action="index.php">
-				<div class="InputBlocks">
-					<input type="text" name="Name" placeholder="Your Name">
+				<div class="ckout_input">
+					<input type="text" name="Name" placeholder="Your Name" class="input_text">
 				</div>
-				<div InputBlocks>
-					<input type="text" name="Email" placeholder="Your Email Address">
-					<span class="error">* <?php echo $coEmailErr;?></span>
+				<div class="ckout_input">
+					<input type="text" name="Email" placeholder="Your Email Address" class="input_text">
+					<span>* <?php echo $coEmailErr;?></span>
 				</div>
-				<div InputBlocks>
-					<input type="text" name="Contact" placeholder="Your Contact Number">
-					<span class="error">* <?php echo $coContactErr;?></span>
+				<div class="ckout_input">
+					<input type="text" name="Contact" placeholder="Your Contact Number" class="input_text">
+					<span>* <?php echo $coContactErr;?></span>
 				</div>
-				<div class="Enter">
+				<div class="ckout_input">
 					<button type="submit" name="checkout" class="btn">Checkout</button>
 				</div>
 			</form>
-		</div>	
 
-		<div class="checkin" style="float: right; width: 50%">
-			<h2 class="SideHeading"> <strong>Book An Appoinment</strong></h2>
-
-			<form name="input" method="post" action="index.php" onsubmit="return validateForm()" class="reg_form">
-				<div class="visitor">
-					<h3 class="visitor">Your Details</h3>
-					<div class="Reg">
-						<input type="text" name="Name" placeholder="Your Name">
-						<span class="error">* <?php echo $nameErr;?></span>
-					</div>
-					<div class="Reg">
-						<input type="text" name="Email" placeholder="Your Email Address">
-						<span class="error">* <?php echo $EmailErr;?></span>
-					</div>
-					<div class="Reg">
-						<input type="text" name="Contact" placeholder="Your Contact number">
-						<span class="error">* <?php echo $contactErr;?></span>
-					</div>
-				</div>
-
-			<div class="host">
-				<h3>Host Details</h3>
-				<div class="Reg">
-					<input type="text" name="hostName" placeholder="Host Name">
-					<span class="error">* <?php echo $hostnameErr;?></span>
-				</div>
-				<div class="Reg">
-					<input type="text" name="hostEmail" placeholder="Your Email Address">
-					<span class="error">* <?php echo $hostEmailErr;?></span>
-				</div>
-				<div class="Reg">
-					<input type="text" name="hostContact" placeholder="Host Contact number">
-					<span class="error">* <?php echo $hostcontactErr;?></span>
-				</div>
-			</div>
-
-			<div class="Enter">
-				<button type="submit" name="checkin" class="btn">CheckIn</button>
-			</div>
-		</form>
 		</div>
+
+		<div class="about_class">
+			<div class="about_img">
+				<div class="about">
+					<pre style="font-family:cursive; font-style:italic; font-size:40px">WHAT IS OUR STORY?</pre>
+					<p style="font-size:25px;">			
+						Fueled by innovation, people at Innovaccer are driven by a hunger for learning and a desire to make a difference. We’re a San Francisco-based organization focused on helping healthcare organizations accelerate innovation by making powerful decisions based on key insights and data-driven predictions.
+						<div class="about_img">
+							<div class="img"> <img src="summergeeks.png" alt="Error Logo Missing" height="200" width="460"></div>
+						</div>
+					</p>
+				</div>
+			</div>
+	 	</div>
+
+
+	 	<div class="Main_checkin">
+	 		<div class="book_app">Book An Appoinment</div>
+	 		<form method="post" action="index.php" onsubmit="return validateForm()" class="reg_form">
+	 			<div class="your_detail">
+	 				Your Details
+	 			</div>
+		 		<div class="checkin">
+		 			<div class="input">
+						<input type="text" name="Name" placeholder="Your Name">
+						<span>* <?php echo $nameErr;?></span>
+					</div>
+				
+	                <div class="input">
+						<input type="text" name="Email" placeholder="Your Email Address">
+						<span>* <?php echo $EmailErr;?></span>
+				    </div>
+				
+					<div class="input">
+						<input type="text" name="Contact" placeholder="Your Contact number">
+						<span>* <?php echo $contactErr;?></span>
+					</div>
+				</div>
+
+				<div class="host_detail">
+					Host Details
+				</div>
+		 		<div class="checkin">
+		 			<div class="input">
+						<input type="text" name="hostName" placeholder="Host Name">
+						<span>* <?php echo $hostnameErr;?></span>
+					</div>
+					
+					<div class="input">
+						<input type="text" name="hostEmail" placeholder="Your Email Address">
+						<span>* <?php echo $hostEmailErr;?></span>
+					</div>
+					
+					<div class="input">
+						<input type="text" name="hostContact" placeholder="Host Contact number">
+						<span>* <?php echo $hostcontactErr;?></span>
+					</div>
+				</div>
+				<div class="input">
+					<button type="submit" name="checkin" class="btn">CheckIn</button>
+				</div>
+			</form>
+	 	</div>
 	</body>
 </html>
